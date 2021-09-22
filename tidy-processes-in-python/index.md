@@ -1,8 +1,8 @@
 ---
 title: Tidy Processes in Python
 tags: [python]
-date: 2019-11-07
-updatedAt: 2020-02-15
+publishedAt: 2019-11-07
+editedAt: 2020-02-15
 ---
 
 The [subprocess module](https://docs.python.org/3/library/subprocess.html#subprocess.run) from the Python standard library makes it easy to start processes from within your Python script.

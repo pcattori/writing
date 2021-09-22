@@ -1,8 +1,8 @@
 ---
 title: Inventing the Y-Combinator
 tags: [functional-programming, lambda-calculus]
-date: 2020-04-28
-updatedAt: 2020-07-03
+publishedAt: 2020-04-28
+editedAt: 2020-07-03
 ---
 
 In this post we will derive the [Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator) from first principles.

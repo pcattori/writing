@@ -1,8 +1,8 @@
 ---
 title: Compose behavior with React hooks 🎣
 tags: [react]
-date: 2019-11-14
-updatedAt: 2020-02-15
+publishedAt: 2019-11-14
+editedAt: 2020-02-15
 ---
 
 When I first learned [React](https://reactjs.org/) ⚛️, it took me less than a day to run into the ol' ["controlled vs uncontrolled components"](https://reactjs.org/docs/uncontrolled-components.html) dichotomy.

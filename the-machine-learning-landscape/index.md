@@ -1,8 +1,8 @@
 ---
 title: The Machine Learning Landscape
 tags: [machine-learning]
-date: 2019-12-20
-updatedAt: 2020-02-15
+publishedAt: 2019-12-20
+editedAt: 2020-02-15
 ---
 
 Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same. Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
