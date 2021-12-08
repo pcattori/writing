@@ -7,7 +7,7 @@ editedAt: 2021-12-07
 
 Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same. Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
 
-![Venn diagram for Artificial Intelligence, Machine Learning, and Deep Learning](/artificial-intelligence.png)
+![Venn diagram for Artificial Intelligence, Machine Learning, and Deep Learning](images/artificial-intelligence.png)
 
 **AI** is “intelligence demonstrated by machines...that mimic cognitive functions that humans associate with the human mind, such as learning and problem solving”.[^1]
 Informally:
@@ -25,7 +25,7 @@ The [fathers of AI](<https://en.wikipedia.org/wiki/John_McCarthy_(computer_scien
 
 [^3]: from [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence](http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html)
 
-![John McCarthy](/john-mccarthy.jpg)
+![John McCarthy](images/john-mccarthy.jpg)
 
 <figcaption>
 
@@ -36,7 +36,7 @@ John McCarthy
 In 2005, Minsky coined the phrase ["suitcase word"](https://alexvermeer.com/unpacking-suitcase-words/) to describe how people cram terms like "consciousness" and "intelligence" with different meanings.[^4]
 [^4]: from [The Emotion Machine](https://web.media.mit.edu/~minsky/eb4.html)
 
-![Marvin Minsky](/marvin-minsky.jpg)
+![Marvin Minsky](images/marvin-minsky.jpg)
 
 Are virtual assistants like Siri and Alexa "smart"?
 How about automated phone systems?
@@ -105,7 +105,7 @@ You’ve probably heard of “Deep Learning”. Right now, Deep Learning is popu
 
 Philosophically, Deep Learning is about **learning features** of the data first and then using those features to learn how to do well on the original task.
 
-![Visualization of the features learned by a Convolutional Neural Net (CNN)](/learning-features.jpg)
+![Visualization of the features learned by a Convolutional Neural Net (CNN)](images/learning-features.jpg)
 
 In practice, most Deep Learning is done by using larger Neural Networks (**Supervised** ML that has been around for decades) than was previously feasible.
 The parts of the network closest to the data implicitly learn how to **extract features**—detecting straight lines or boundaries from raw pixels—and the further parts of the network can then use those features—detecting faces from lines and boundaries.
@@ -121,7 +121,7 @@ Deep Learning comes with some tradeoffs:
 - Achieving record-breaking results requires TONS of training data (e.g. tens of millions of labeled examples)[^7]
 - ...
 
-![Traditional ML (red) vs different sizes of Neural Nets (green, blue, yellow).](andrew-ng-graph.png)
+![Traditional ML (red) vs different sizes of Neural Nets (green, blue, yellow).](images/andrew-ng-graph.png)
 
 Figure above is taken from the [Deep Learning Specialization](https://www.coursera.org/specializations/deep-learning) on Coursera, taught by [Andrew Ng](https://en.wikipedia.org/wiki/Andrew_Ng).
 For 'small' training sets (i.e. < 1M points), Neural Nets do not provide much benefit.
