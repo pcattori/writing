@@ -2,7 +2,7 @@
 title: Tidy Processes in Python
 tags: [python]
 publishedAt: 2019-11-07
-editedAt: 2020-02-15
+editedAt: 2021-12-07
 ---
 
 The [subprocess module](https://docs.python.org/3/library/subprocess.html#subprocess.run) from the Python standard library makes it easy to start processes from within your Python script.
@@ -13,12 +13,6 @@ But, it gets more complex if:
 2. The subprocess creates its own child processes
 
 In my case, I had a [Flask](https://flask.palletsprojects.com/en/1.1.x/) server that needed to be running while my experiment script ran since my script made API calls to the server.
-
-{{<mermaid>}}
-graph LR;
-A[experiment.py] -->|request| B[api_server.py]
-B -->|response| A
-{{</mermaid>}}
 
 Dealing with concurrency (1) is not too hard as its documented clearly in the `subprocess` docs.
 Just use `subprocess.Popen`:
@@ -32,7 +26,7 @@ result = run_experiment() # sends API requests to flask app
 print(result)
 ```
 
-Running `python experiment.py` once and the experiment runs successfully! :smile:
+Running `python experiment.py` once and the experiment runs successfully! 😃
 
 **BUT**, running `python experiment.py` again reveals the ugly truth:
 
@@ -54,11 +48,11 @@ OSError: [Errno 48] Address already in use
 ```
 
 The Flask server from the first run is still running, causing new runs to crash when a new Flask server tries to take the same port (by default port `5000` for Flask).
-`proc.kill` doesn't save us since that will kill the `python flask_app.py` subprocess, but the Flask server actually runs in a child process _of that subprocess_, leaving us with a [zombie process](https://en.wikipedia.org/wiki/Zombie_process) :zombie:.
+`proc.kill` doesn't save us since that will kill the `python flask_app.py` subprocess, but the Flask server actually runs in a child process _of that subprocess_, leaving us with a [zombie process](https://en.wikipedia.org/wiki/Zombie_process) 🧟.
 
 ## Solution
 
-The solution is to recursively kill :skull: all the children processes:[^1]
+The solution is to recursively kill 💀 all the children processes:[^1]
 [^1]: Yikes, OS programming is violent...
 
 ```python
@@ -96,4 +90,4 @@ with open('out.log', 'w') as out, open('err.log', 'w') as err:
 ```
 
 Here, I log `stdout` / `stderr` of the subprocess to files.
-Not necessary, but convenient for debugging :bug:.
+Not necessary, but convenient for debugging 🐛.
