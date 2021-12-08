@@ -2,7 +2,7 @@
 title: Inventing the Y-Combinator
 tags: [functional-programming, lambda-calculus]
 publishedAt: 2020-04-28
-editedAt: 2020-07-03
+editedAt: 2020-12-08
 ---
 
 In this post we will derive the [Y-combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator#Y_combinator) from first principles.
@@ -23,47 +23,47 @@ def f(n):
 
 **Step 1:**
 
-Start with a function {{< katex inline >}}f{{< /katex >}} whose implementation is self-referencing.
+Start with a function $f$ whose implementation is self-referencing.
 
-If {{< katex inline >}}f{{< /katex >}}'s body references itself once, {{< katex inline >}}f{{< /katex >}} will have a form like:
+If $f$'s body references itself once, $f$ will have a form like:
 
-{{< katex >}}
+$$
 f_1 = ...f_1...
-{{< /katex >}}
+$$
 
 For two self-references:
 
-{{< katex >}}
+$$
 f_2 = ...f_2...f_2...
-{{< /katex >}}
+$$
 
 Or three:
 
-{{< katex >}}
+$$
 f_3 = ...f_3...f_3...f_3...
-{{< /katex >}}
+$$
 
 etc..
 
-Here we use {{< katex inline >}}...{{< /katex >}} to denote any lambda calculus expression.
+Here we use $...$ to denote any lambda calculus expression.
 
 For our example, we have two self-references (`f(n - 1)` and `f(n - 2)`), but our analysis will hold for any number of self-references.
 
-{{< katex >}}
+$$
 f = ...f...f...
-{{< /katex >}}
+$$
 
 **Step 2:**
 
-Instead of hardcoding {{< katex inline >}}f{{< /katex >}} in the body, let's factor out {{< katex inline >}}f{{< /katex >}}:
+Instead of hardcoding $f$ in the body, let's factor out $f$:
 
-{{< katex >}}
+$$
 f = (\lambda r ...r...r...)f = Mf
-{{< /katex >}}
+$$
 
-where we define {{< katex inline >}}M := \lambda r ...r...r...{{< /katex >}}
+where we define $M := \lambda r ...r...r...$
 
-Logically, {{< katex inline >}}...{{< /katex >}}s encode all the non-recursive logic.
+Logically, $...$s encode all the non-recursive logic.
 
 For our Python example, the non-recursive logic look like:
 
@@ -79,76 +79,76 @@ def M(r, n):
 
 Notice that this function is no longer recursive; there are no calls to `M` in its body.
 
-We've made progress: {{< katex inline >}}M{{< /katex >}} does not depend on {{< katex inline >}}f{{< /katex >}}!
+We've made progress: $M$ does not depend on $f$!
 
-But we still depend on {{< katex inline >}}f{{< /katex >}} for it's own definition:
+But we still depend on $f$ for it's own definition:
 
-{{< katex >}}
+$$
 f = (\lambda r ...r...r...)f = Mf
-{{< /katex >}}
+$$
 
-Can we construct an input for {{< katex inline >}}M{{< /katex >}} that does not depend on {{< katex inline >}}f{{< /katex >}}?
+Can we construct an input for $M$ that does not depend on $f$?
 
 **Step 3:**
 
-Let's try using {{< katex inline >}}M{{< /katex >}} in place of {{< katex inline >}}f{{< /katex >}}:
+Let's try using $M$ in place of $f$:
 
-{{< katex >}}
+$$
 f \stackrel{?}{=} (\lambda r ...r...r...)(\lambda r ...r...r...) = MM
-{{< /katex >}}
+$$
 
 This may seem like a shot in the dark. And it is!
 
 We don't expect this to work, but exploring this construction will give us insight to what the answer should be.
 
-If we assume {{< katex inline >}}f = M{{< /katex >}} then {{< katex inline >}}f = MM{{< /katex >}} (because {{< katex inline >}}f = Mf{{< /katex >}}).
+If we assume $f = M$ then $f = MM$ (because $f = Mf$).
 How far is this from the truth?
 
 Looking at our Python examples, we know that `f` is not the same function as `M`, but there is a lot of overlap!
 
-So {{< katex inline >}}f = Mf \ne MM {{< /katex >}}, but could we tweak {{< katex inline >}}M{{< /katex >}} to make this work?
+So $f = Mf \ne MM$, but could we tweak $M$ to make this work?
 
 **Step 4:**
 
-What if {{< katex inline >}}M{{< /katex >}} didn't take {{< katex inline >}}f{{< /katex >}} as a variable, but expected itself as a variable?!
+What if $M$ didn't take $f$ as a variable, but expected itself as a variable?!
 
-In other words, let's work backward from what we want: define {{< katex inline >}}M'{{< /katex >}} such that {{< katex inline >}}f = M'M'{{< /katex >}} .
+In other words, let's work backward from what we want: define $M'$ such that $f = M'M'$ .
 
-{{< katex >}}
+$$
 f = M'M'
-{{< /katex >}}
+$$
 
-Then, to create {{< katex inline >}}f{{< /katex >}}, we can just apply that variable in {{< katex inline >}}M'{{< /katex >}} to itself!
+Then, to create $f$, we can just apply that variable in $M'$ to itself!
 
-{{< katex >}}
+$$
 f = (\lambda r (rr)) M'
-{{< /katex >}}
+$$
 
-Can we solve for {{< katex inline >}}M'{{< /katex >}} and use it to define {{< katex inline >}}f{{< /katex >}}? Yes!
+Can we solve for $M'$ and use it to define $f$? Yes!
 
-{{< katex >}}
+$$
 f = (\lambda r ...(rr)...(rr)...)(\lambda r ...(rr)...(rr)...) = M'M'
-{{< /katex >}}
+$$
 
 **Step 5:**
 
-Cleaning up, we can express {{< katex inline >}}M'{{< /katex >}} in terms of {{< katex inline >}}M{{< /katex >}}:
+Cleaning up, we can express $M'$ in terms of $M$:
 
-{{< katex >}}
+$$
 M' = \lambda r ...(rr)...(rr)...
-{{< /katex >}}
+$$
 
-{{< katex >}}
+$$
 M = \lambda r ...r...r...
-{{< /katex >}}
+$$
 
-{{< katex >}}
+$$
 \therefore M' = \lambda x.M(xx)
-{{< /katex >}}
+$$
 
-{{< katex >}}
+$$
 \therefore f = (\lambda x.M(xx))(\lambda x.M(xx))
-{{< /katex >}}
+$$
 
 **Step 6:**
 
@@ -156,22 +156,22 @@ Can we generalize this approach for _any_ recursive function? Yes!
 
 Starting with the expression:
 
-{{< katex >}}
+$$
 f = (\lambda x.M(xx))(\lambda x.M(xx))
-{{< /katex >}}
+$$
 
-we can factor out {{< katex inline >}}M{{< /katex >}} as a parameter to define the Y-combinator:
+we can factor out $M$ as a parameter to define the Y-combinator:
 
-{{< katex >}}
+$$
 \Upsilon = \lambda m.(\lambda x.m(xx))(\lambda x.m(xx))
-{{< /katex >}}
+$$
 
-For any recursive function {{< katex inline >}}f{{< /katex >}}, we can extract its non-recursive logic {{< katex inline >}}M{{< /katex >}} like we did in our Python example.
-Then we simply pass {{< katex inline >}}M{{< /katex >}} into the Y-combinator to define {{< katex inline >}}f{{< /katex >}}.
+For any recursive function $f$, we can extract its non-recursive logic $M$ like we did in our Python example.
+Then we simply pass $M$ into the Y-combinator to define $f$.
 
-{{< katex >}}
+$$
 f = \Upsilon M = (\lambda m.(\lambda x.m(xx))(\lambda x.m(xx)))M
-{{< /katex >}}
+$$
 
-Philosophically, the variable {{< katex inline >}}m{{< /katex >}} encodes all interesting parts of {{< katex inline >}}f{{< /katex >}}'s implementation.
+Philosophically, the variable $m$ encodes all interesting parts of $f$'s implementation.
 The rest of this expression just plumbs through the recursion.
