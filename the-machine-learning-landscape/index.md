@@ -2,7 +2,7 @@
 title: The Machine Learning Landscape
 tags: [machine-learning]
 publishedAt: 2019-12-20
-editedAt: 2020-02-15
+editedAt: 2021-12-07
 ---
 
 Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same. Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
@@ -52,11 +52,11 @@ Informally:
 
 Unlike AI, ML can be defined much more rigorously, even mathematically. For example, in ML we can often define an **accuracy metric** to formalize what we mean by “smart”. I won’t go into the math here, but I will take some time to discuss the most common types of ML.
 
-# Types of ML
+## Types of ML
 
 The three main types of ML in research and in practice are [Supervised Learning, Unsupervised learning, and Reinforcement Learning](https://en.wikipedia.org/wiki/Machine_learning#Types_of_learning_algorithms).
 
-## Supervised Learning
+### Supervised Learning
 
 > ...seems smart by making smart **predictions**
 
@@ -71,7 +71,7 @@ The human acts as the “supervisor”, giving the machine the correct example o
 
 **Example**: Google Photos tags people in photos and asks you if the person in two different pictures is the same person or not.
 
-## Unsupervised Learning
+### Unsupervised Learning
 
 > ...seems smart by finding **structure** in data
 
@@ -84,7 +84,7 @@ Anything beyond simple clustering is still being researched but not used widely 
 
 **Example**: Netflix groups similar movies into custom genres.
 
-## Reinforcement Learning
+### Reinforcement Learning
 
 > ...seems smart by taking smart **actions**
 
@@ -99,7 +99,7 @@ Reinforcement learning is still studied in cutting-edge research and is not wide
 
 **Example**: [AlphaZero](https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go) learns to play superhuman chess by playing against itself.
 
-# A note on Deep Learning
+## A note on Deep Learning
 
 You’ve probably heard of “Deep Learning”. Right now, Deep Learning is popular because of its record-breaking smartness on known ML benchmarks, such as image classification (e.g. “Is there a cat in this photo?”).
 
