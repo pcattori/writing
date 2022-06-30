@@ -25,12 +25,24 @@ The [fathers of AI](<https://en.wikipedia.org/wiki/John_McCarthy_(computer_scien
 
 [^3]: from [A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence](http://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html)
 
-![John McCarthy](images/john-mccarthy.jpg "John McCarthy")
+<figure>
+  <img src="./images/john-mccarthy.jpg" alt="John McCarthy">
+  <figcaption>
+    <span>John McCarthy in the artificial intelligence lab at Stanford in 1974.</span>
+    <i>Photo by Chuck Painter</i>
+  </figcaption>
+</figure>
 
 In 2005, Minsky coined the phrase ["suitcase word"](https://alexvermeer.com/unpacking-suitcase-words/) to describe how people cram terms like "consciousness" and "intelligence" with different meanings.[^4]
 [^4]: from [The Emotion Machine](https://web.media.mit.edu/~minsky/eb4.html)
 
-![Marvin Minsky](images/marvin-minsky.jpg "Marvin Minsky")
+<figure>
+  <img src="./images/marvin-minsky.jpg" alt="Marvin Minsky">
+  <figcaption>
+    <span>Marvin Minsky in a lab at M.I.T. in 1968.</span>
+    <i>Photo by M.I.T.</i>
+  </figcaption>
+</figure>
 
 Are virtual assistants like Siri and Alexa "smart"?
 How about automated phone systems?
