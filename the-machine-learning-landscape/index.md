@@ -5,7 +5,8 @@ publishedAt: 2019-12-20
 editedAt: 2022-07-06
 ---
 
-Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same. Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
+Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same.
+Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
 
 ![Venn diagram for Artificial Intelligence, Machine Learning, and Deep Learning](images/artificial-intelligence.png)
 
@@ -56,7 +57,9 @@ Informally:
 
 [^5]: from the [Wikipedia definition for ML](https://en.wikipedia.org/wiki/Machine_learning)
 
-Unlike AI, ML can be defined much more rigorously, even mathematically. For example, in ML we can often define an **accuracy metric** to formalize what we mean by “smart”. I won’t go into the math here, but I will take some time to discuss the most common types of ML.
+Unlike AI, ML can be defined much more rigorously, even mathematically.
+For example, in ML we can often define an **accuracy metric** to formalize what we mean by “smart”.
+I won’t go into the math here, but I will take some time to discuss the most common types of ML.
 
 ## Types of ML
 
@@ -83,10 +86,9 @@ The human acts as the “supervisor”, giving the machine the correct example o
 
 > ...cannot get smarter without **manual tuning**
 
-“Unsupervised Learning” is a misnomer in that no learning is taking place.
+In my eyes, “Unsupervised Learning” is a misnomer in that no _learning_ is taking place.
 These systems **do not learn** from observations nor experience, so changing the code or tuning parameters manually are the main ways to make Unsupervised Learning systems smarter.
 Simple clustering algorithms fit in this bucket.
-Anything beyond simple clustering is still being researched but not used widely in industry.
 
 **Example**: Netflix groups similar movies into custom genres.
 
