@@ -1,6 +1,5 @@
 ---
 title: The Machine Learning Landscape
-tags: [machine-learning]
 publishedAt: 2019-12-20
 editedAt: 2022-07-06
 ---

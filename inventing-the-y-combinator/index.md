@@ -1,6 +1,5 @@
 ---
 title: Inventing the Y-Combinator
-tags: [functional-programming, lambda-calculus]
 publishedAt: 2020-04-28
 editedAt: 2020-12-08
 ---
