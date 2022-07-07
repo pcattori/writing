@@ -1,5 +1,4 @@
-# writing
+# Writing
 
-Each subdirectory is a self-contained post.
-
-The writing is collocated with any media (e.g. pictures) and `mdx` components it references.
+Each directory is a self-contained post.
+The main prose is in `index.md` and is collocated with any media (e.g. pictures) needed for the post.
