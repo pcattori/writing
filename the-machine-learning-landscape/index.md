@@ -2,7 +2,7 @@
 title: The Machine Learning Landscape
 tags: [machine-learning]
 publishedAt: 2019-12-20
-editedAt: 2021-12-08
+editedAt: 2022-07-06
 ---
 
 Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same. Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
@@ -107,18 +107,18 @@ Reinforcement learning is still studied in cutting-edge research and is not wide
 
 ## A note on Deep Learning
 
-You’ve probably heard of “Deep Learning”. Right now, Deep Learning is popular because of its record-breaking smartness on known ML benchmarks, such as image classification (e.g. “Is there a cat in this photo?”).
+You’ve probably heard of “Deep Learning”. Deep Learning is popular because of its record-breaking performance on known ML benchmarks, such as image classification (e.g. “Is there a cat in this photo?”).
 
 Philosophically, Deep Learning is about **learning features** of the data first and then using those features to learn how to do well on the original task.
 
-![Visualization of the features learned by a Convolutional Neural Net (CNN)](images/learning-features.jpg)
+![Feature layers learned by a Convolutional Neural Net (CNN)](images/learning-features.jpg)
 
-In practice, most Deep Learning is done by using larger Neural Networks (**Supervised** ML that has been around for decades) than was previously feasible.
+In practice, most Deep Learning is done by using Neural Networks (**Supervised** ML that has been around for decades) at larger sizes than was previously feasible.
 The parts of the network closest to the data implicitly learn how to **extract features**—detecting straight lines or boundaries from raw pixels—and the further parts of the network can then use those features—detecting faces from lines and boundaries.
 In theory, ML models other than Neural Nets could also be used to learn features.
 So in the future, you may see Deep Learning without Neural Networks, but don’t hold your breath.
 
-The Deep Learning craze is happening now due to recent advances in computation (e.g. faster processors and GPUs) that make this layered learning feasible.
+Interest in Deep Learning has grown recently due to recent advances in computation (e.g. faster processors and GPUs) that make this layered learning feasible.
 
 Deep Learning comes with some tradeoffs:
 
