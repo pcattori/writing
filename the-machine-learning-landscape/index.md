@@ -5,7 +5,8 @@ editedAt: 2022-07-06
 ---
 
 Artificial Intelligence (AI) and Machine Learning (ML) are often conflated, but they are not the same.
-Rather, ML is a subset of AI. Deep Learning (DL) is a subset of ML.
+Rather, ML is a subset of AI.
+Deep Learning (DL) is a subset of ML.
 
 ![Venn diagram for Artificial Intelligence, Machine Learning, and Deep Learning](images/artificial-intelligence.png)
 
@@ -15,7 +16,7 @@ Informally:
 > AI systems **seem smart**.[^2]
 
 [^1]: from the [Wikipedia definition for AI](https://en.wikipedia.org/wiki/Artificial_intelligence)
-[^2]: The famous [Turing Test](https://en.wikipedia.org/wiki/Turing_test) posits that “seeming smart” is the same as “being smart”
+[^2]: The famous [Turing Test](https://en.wikipedia.org/wiki/Turing_test) posits that “seeming smart” is the best observable proxy for “being smart”.
 
 If you think this is a mushy, ambiguous definition, you would be correct.
 If you are looking for a more rigorous definition, be prepared to fail.
